@@ -1,10 +1,1 @@
 @import "@primer/css/dist/markdown.css";
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-}

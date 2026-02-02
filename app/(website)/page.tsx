@@ -10,19 +10,11 @@ import {
   Stack,
   Text,
 } from "@primer/react";
-import { MarkGithubIcon } from "@primer/octicons-react";
+import {NextPage} from "next";
 
-export default function Home() {
+export default (() => {
   return (
-    <PageLayout>
-      <PageLayout.Header>
-        <Stack direction="horizontal" align="center" gap="condensed">
-          <MarkGithubIcon size={24} />
-          <Heading as="h1" variant="medium">
-            Tertier Docs
-          </Heading>
-        </Stack>
-      </PageLayout.Header>
+    <>
       <PageLayout.Content>
         <Stack gap="normal">
           <Heading as="h2" variant="large">
@@ -48,7 +40,7 @@ export default function Home() {
           </Flash>
         </Stack>
       </PageLayout.Content>
-      <PageLayout.Pane position="end">
+      {/* <PageLayout.Pane position="end">
         <Stack gap="condensed">
           <Heading as="h3" variant="small">
             Status
@@ -58,7 +50,7 @@ export default function Home() {
             All UI uses GitHub Primer as-is to match the GitHub design system.
           </Text>
         </Stack>
-      </PageLayout.Pane>
-    </PageLayout>
+      </PageLayout.Pane> */}
+    </>
   );
-}
+}) satisfies NextPage;
