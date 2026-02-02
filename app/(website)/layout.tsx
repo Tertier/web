@@ -2,6 +2,7 @@
 
 import {PageLayout} from "@primer/react";
 import Header from "./header";
+import Footer from "./footer";
 
 export default function RootLayout({
   children,
@@ -10,10 +11,13 @@ export default function RootLayout({
 }>) {
   return (
     <PageLayout>
-      <PageLayout.Header>
+      <PageLayout.Header divider="line">
         <Header />
       </PageLayout.Header>
       {children}
+      <PageLayout.Footer divider="line">
+        <Footer />
+      </PageLayout.Footer>
     </PageLayout>
   );
 }
