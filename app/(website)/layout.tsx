@@ -1,16 +1,7 @@
 "use client";
 
-import {
-  Button,
-  Flash,
-  Heading,
-  Label,
-  Link,
-  PageHeader,
-  PageLayout,
-  Stack,
-  Text,
-} from "@primer/react";
+import {PageLayout} from "@primer/react";
+import Header from "./header";
 
 export default function RootLayout({
   children,
@@ -20,19 +11,7 @@ export default function RootLayout({
   return (
     <PageLayout>
       <PageLayout.Header>
-        <PageHeader hasBorder>
-          <PageHeader.TitleArea>
-            <PageHeader.LeadingVisual>
-              🐶
-            </PageHeader.LeadingVisual>
-            <PageHeader.Title>
-              Tertier
-            </PageHeader.Title>
-            <PageHeader.TrailingVisual>
-              <Label>Beta</Label>
-            </PageHeader.TrailingVisual>
-          </PageHeader.TitleArea>
-        </PageHeader>
+        <Header />
       </PageLayout.Header>
       {children}
     </PageLayout>
