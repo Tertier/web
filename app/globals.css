@@ -1,3 +1,5 @@
+@import "@primer/css/dist/markdown.css";
+
 html,
 body {
   height: 100%;
