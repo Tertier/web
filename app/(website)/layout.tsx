@@ -3,12 +3,12 @@
 import {PageLayout} from "@primer/react";
 import Header from "./header";
 import Footer from "./footer";
+import {NextPage} from "next";
+import {PropsWithChildren} from "react";
 
-export default function RootLayout({
+export default (async ({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}) => {
   return (
     <PageLayout>
       <PageLayout.Header divider="line">
@@ -20,4 +20,4 @@ export default function RootLayout({
       </PageLayout.Footer>
     </PageLayout>
   );
-}
+}) satisfies NextPage<PropsWithChildren>;
