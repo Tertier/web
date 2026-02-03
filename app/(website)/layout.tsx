@@ -11,7 +11,7 @@ export default (({
 }) => {
   return (
     <PageLayout>
-      <PageLayout.Header divider="line">
+      <PageLayout.Header>
         <Header />
       </PageLayout.Header>
       {children}
