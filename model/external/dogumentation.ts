@@ -9,6 +9,7 @@ export const DogumentationSchema = z.object({
     display: z.string(),
   }),
   version: z.string(),
+  socialMedia: z.array(z.url()).optional(),
 });
 
 export type Dogumentation = z.infer<typeof DogumentationSchema>;
