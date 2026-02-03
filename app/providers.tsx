@@ -1,6 +1,6 @@
 "use client";
 
-import { BaseStyles, ThemeProvider } from "@primer/react";
+import {ThemeProvider} from "@primer/react";
 
 export default function Providers({
   children,
@@ -8,8 +8,8 @@ export default function Providers({
   children: React.ReactNode;
 }>) {
   return (
-    <ThemeProvider>
-      <BaseStyles>{children}</BaseStyles>
+    <ThemeProvider colorMode="auto" preventSSRMismatch>
+      {children}
     </ThemeProvider>
   );
 }

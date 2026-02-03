@@ -1,1 +1,11 @@
-@import "@primer/css/dist/markdown.css";
+/* @import "@primer/css/dist/markdown.css"; */
+@import "@primer/css/dist/primer.css";
+
+html,
+body {
+  height: 100%;
+}
+
+body > div[data-color-mode="auto"] {
+  height: 100%;
+}
