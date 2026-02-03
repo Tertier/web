@@ -40,7 +40,7 @@ export default (() => {
           </Flash>
         </Stack>
       </PageLayout.Content>
-      {/* <PageLayout.Pane position="end">
+      <PageLayout.Pane position="start">
         <Stack gap="condensed">
           <Heading as="h3" variant="small">
             Status
@@ -50,7 +50,18 @@ export default (() => {
             All UI uses GitHub Primer as-is to match the GitHub design system.
           </Text>
         </Stack>
-      </PageLayout.Pane> */}
+      </PageLayout.Pane>
+      <PageLayout.Pane position="end">
+        <Stack gap="condensed">
+          <Heading as="h3" variant="small">
+            Status
+          </Heading>
+          <Label variant="accent">Static Export</Label>
+          <Text size="small">
+            All UI uses GitHub Primer as-is to match the GitHub design system.
+          </Text>
+        </Stack>
+      </PageLayout.Pane>
     </>
   );
 }) satisfies NextPage;

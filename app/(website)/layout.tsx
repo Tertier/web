@@ -6,7 +6,7 @@ import Footer from "./footer";
 import {NextPage} from "next";
 import {PropsWithChildren} from "react";
 
-export default (async ({
+export default (({
   children,
 }) => {
   return (
