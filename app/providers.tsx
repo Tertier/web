@@ -1,15 +1,15 @@
 "use client";
 
-import {ThemeProvider} from "@primer/react";
+import {HeroUIProvider} from "@heroui/system";
+import {useRouter} from "next/navigation";
+import {FunctionComponent, PropsWithChildren} from "react";
 
-export default function Providers({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default (({children}) => {
+  const router = useRouter();
+
   return (
-    <ThemeProvider colorMode="auto" preventSSRMismatch>
+    <HeroUIProvider navigate={router.push}>
       {children}
-    </ThemeProvider>
+    </HeroUIProvider >
   );
-}
+}) satisfies FunctionComponent<PropsWithChildren>;

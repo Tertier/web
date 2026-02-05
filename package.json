@@ -7,14 +7,17 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "clean": "rimraf .next",
     "generate-json-schema": "tsx ./scripts/generate-json-schema.ts"
   },
   "dependencies": {
-    "@primer/css": "^22.1.0",
-    "@primer/octicons-react": "^19.21.2",
-    "@primer/react": "^38.9.0",
+    "@heroui/react": "^2.8.8",
+    "@heroui/system": "^2.4.26",
+    "@heroui/theme": "^2.4.26",
+    "framer-motion": "^12.32.0",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
+    "next-themes": "^0.4.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-is": "^19.2.4",
@@ -28,11 +31,17 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@react-types/shared": "^3.32.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "postcss": "^8.5.6",
+    "rimraf": "^6.1.2",
+    "tailwindcss": "^4.1.18",
     "tsx": "^4.21.0",
     "typescript": "^5"
   }

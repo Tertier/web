@@ -1,7 +1,6 @@
 "use client";
 
-import { MarkGithubIcon } from "@primer/octicons-react";
-import { Heading, Link, PageLayout, Stack, Text } from "@primer/react";
+import { Card, CardBody, CardHeader, Divider, Link } from "@heroui/react";
 
 type DocPageClientProps = {
   title: string;
@@ -10,23 +9,25 @@ type DocPageClientProps = {
 
 export default function DocPageClient({ title, html }: DocPageClientProps) {
   return (
-    <PageLayout>
-      <PageLayout.Header>
-        <Stack direction="horizontal" align="center" gap="condensed">
-          <MarkGithubIcon size={24} />
-          <Heading as="h1" variant="medium">
-            {title}
-          </Heading>
-        </Stack>
-      </PageLayout.Header>
-      <PageLayout.Content>
-        <Stack gap="normal">
-          <Text size="small">
+    <div className="mx-auto w-full max-w-4xl space-y-6">
+      <Card>
+        <CardHeader className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-wide text-default-500">
+            Documentation
+          </p>
+          <h1 className="text-2xl font-semibold tracking-tight">{title}</h1>
+          <p className="text-sm text-default-500">
             Rendered from <Link href="/docs">/content</Link> markdown.
-          </Text>
-          <div className="markdown-body" dangerouslySetInnerHTML={{ __html: html }} />
-        </Stack>
-      </PageLayout.Content>
-    </PageLayout>
+          </p>
+        </CardHeader>
+        <Divider />
+        <CardBody>
+          <div
+            className="markdown-body prose prose-slate dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </CardBody>
+      </Card>
+    </div>
   );
 }

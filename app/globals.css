@@ -1,11 +1,19 @@
-/* @import "@primer/css/dist/markdown.css"; */
-@import "@primer/css/dist/primer.css";
+@import "tailwindcss";
+
+@plugin "../hero.ts";
+@plugin "@tailwindcss/typography";
+
+@source "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "SFMono-Regular", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
 
 html,
 body {
-  height: 100%;
-}
-
-body > div[data-color-mode="auto"] {
   height: 100%;
 }

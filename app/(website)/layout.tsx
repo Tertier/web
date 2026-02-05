@@ -1,23 +1,15 @@
-"use client";
-
-import {PageLayout} from "@primer/react";
+import { PropsWithChildren } from "react";
 import Header from "./header";
 import Footer from "./footer";
-import {NextPage} from "next";
-import {PropsWithChildren} from "react";
 
-export default (({
-  children,
-}) => {
+export default function WebsiteLayout({ children }: PropsWithChildren) {
   return (
-    <PageLayout>
-      <PageLayout.Header>
-        <Header />
-      </PageLayout.Header>
-      {children}
-      <PageLayout.Footer divider="line">
-        <Footer />
-      </PageLayout.Footer>
-    </PageLayout>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">
+        <div className="mx-auto w-full max-w-6xl px-6 py-10">{children}</div>
+      </main>
+      <Footer />
+    </div>
   );
-}) satisfies NextPage<PropsWithChildren>;
+}

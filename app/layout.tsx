@@ -4,7 +4,7 @@ import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Tertier Docs",
-  description: "Static documentation rendered with GitHub Primer.",
+  description: "Static documentation rendered with HeroUI.",
 };
 
 export default function RootLayout({
@@ -13,9 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Providers>{children}</Providers>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-background text-foreground antialiased font-sans">
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
